@@ -1,0 +1,49 @@
+/* Gobble & Go — The Great Turkey Escape. The game is canvas-drawn; this
+   stylesheet only centres the stage on an autumn backdrop. */
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #2b1a0e;
+}
+
+body {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 50% 30%, #6e4520 0%, #2b1a0e 70%);
+}
+
+#game {
+  display: block;
+  touch-action: none;
+  cursor: pointer;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  background: #f7b733;
+}
+
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.noscript {
+  color: #ffd23e;
+  font-size: 20px;
+  text-align: center;
+  padding: 2em;
+}
